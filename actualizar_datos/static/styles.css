@@ -1,0 +1,212 @@
+/* Color variables for consistent theming */
+:root {
+    --primary-color: #4B0082;  /* Deep purple for the background */
+    --success-color: #4CAF50;  /* Green for success messages */
+    --text-color: #333333;        /* Dark gray for text */
+    --white: #fff;             /* White for contrast */
+}
+
+/* Basic reset and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Main container with split layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left side with background image */
+.image-side {
+    width: 50%;
+    background: linear-gradient(rgba(75, 0, 130, 0.9), rgba(75, 0, 130, 0.9)),
+                url(img/um_campus.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right side with form */
+.content-side {
+    width: 50%;
+    background: var(--white);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo container */
+.logo {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Logo image sizing */
+.logo img {
+    height: 100px;
+    max-width: 100%;
+}
+
+/* Form and success message containers */
+.form-content, .success-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 1rem;
+}
+
+/* Page title */
+h1 {
+    color: var(--text-color);
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+/* Form description text */
+.description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form field groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Form inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Warning message */
+.warning {
+    color: #666;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+/* Submit button */
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #380062;
+}
+
+/* Success page styles */
+.success-content {
+    text-align: center;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+
+/* Success icon */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+svg {
+    overflow: visible;
+}
+
+/* Success animation circles */
+.success-circle {
+    stroke: var(--success-color);
+    stroke-width: 4;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+/* Success check mark */
+.success-check {
+    stroke: var(--success-color);
+    stroke-width: 4;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+/* Success animation keyframes */
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Success page heading */
+.heading {
+    color: var(--text-color);
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Success page text */
+.text {
+    color: var(--text-color);
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-side, .content-side {
+        width: 100%;
+    }
+
+    .image-side {
+        min-height: 200px;
+    }
+
+    .content-side {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

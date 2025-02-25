@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualización de datos - Universidad de Montemorelos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side with background image and logo -->
+        <div class="image-side">
+            <div class="logo">
+                <img src="static/img/logo_um.png" alt="Universidad de Montemorelos">
+            </div>
+        </div>
+        <!-- Right side with the form -->
+        <div class="content-side">
+            <div class="form-content">
+                <h1>Actualización de datos correo institucional</h1>
+                <p class="description">Por favor, completar la información solicitada para la actualización de sus datos.</p>
+
+                <form action="success.html" method="GET">
+                    <div class="form-group">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido*</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo institucional*</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <p class="warning">NOTA: Si no realiza esta actualización en el plazo indicado, su cuenta será bloqueada por seguridad.</p>
+
+                    <button type="submit" class="submit-btn">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
